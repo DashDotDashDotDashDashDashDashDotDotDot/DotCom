@@ -74,22 +74,24 @@ var encode = {
      '8':'---..',
     '9':'----.',
     '0':'-----',
-    '(':'------',
-    '{':'------',
-    '[':'------',
-    '<':'------',
-    ')':'......',
-    '}':'......',
-    ']':'......',
-    '>':'......',
-    '#':'...---',
+    '(':'---...',
+    '{':'---...',
+    '[':'---...',
+    '<':'---...',
+    ')':'...---',
+    '}':'...---',
+    ']':'...---',
+    '>':'...---',
+    '#':'------',
     ';':'.-.-.-',
     '=':'.--.--',
-    '!':'---...',
+    '!':'......',
     '%':'-.-.-.',
     '+':'--..--',
     '-':'..--..',
 }
+
+var lastConv = "";
 
 function convert(code){
     let lines = code.split("\n");
@@ -130,7 +132,14 @@ function convertInput(){
 
     console.log(convert(text));
 
-    textArea.value = convert(text);
+    let morseCode = lastConv;
+
+    if (text != lastConv) {
+        morseCode = convert(text);
+    }
+
+    textArea.value = morseCode;
+    lastConv = morseCode;
 }
 
 document.getElementById('upload').addEventListener('change', readFileAsString)
@@ -149,4 +158,22 @@ function readFileAsString() {
 
     reader.readAsText(files[0]);
 
+}
+
+function download(filename, text) {
+    var element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', filename);
+
+    element.style.display = 'none';
+    document.body.appendChild(element);
+
+    element.click();
+
+    document.body.removeChild(element);
+}
+
+function clickDownload(){
+    let text = textArea.value;
+    download("Morse.txt", text);
 }
