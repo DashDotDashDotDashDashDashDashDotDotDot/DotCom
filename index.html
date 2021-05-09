@@ -38,7 +38,9 @@
 							<p>Just another fine responsive site template designed by <a href="http://html5up.net">HTML5 UP</a><br />
 							and released for free under the <a href="http://html5up.net/license">Creative Commons</a>.</p>
 							<ul class="actions">
-								<li><a href="#one" class="button scrolly">Learn more</a></li>
+								<li><a href="#two" class="button scrolly">Try it Now!</a></li>
+								<p>&emsp; or &ensp; </p>
+								<li><a href="#one" class="button scrolly">Learn More</a></li>
 							</ul>
 						</div>
 					</section>
@@ -46,11 +48,11 @@
 				<!-- One -->
 					<section id="one" class="wrapper style2 spotlights">
 						<section>
-							<a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" /></a>
+							<a href="#" class="image"><img src="images/sad.png" alt="" data-position="center center" /></a>
 							<div class="content">
 								<div class="inner">
-									<h2>Sed ipsum dolor</h2>
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
+									<h2>Is This You?!?</h2>
+									<p>Are you overwhelmed by the shear volume of letters and characters available to code with? Is the pressure to decide between a capital or lower case weighing on your concience? Or are your fingers just tired of moving around? Well boy do we have the solution for you!</p>
 									<ul class="actions">
 										<li><a href="generic.html" class="button">Learn more</a></li>
 									</ul>
@@ -58,11 +60,11 @@
 							</div>
 						</section>
 						<section>
-							<a href="#" class="image"><img src="images/pic02.jpg" alt="" data-position="top center" /></a>
+							<a href="#" class="image"><img src="images/key.JPG" alt="" data-position="top center" /></a>
 							<div class="content">
 								<div class="inner">
-									<h2>Feugiat consequat</h2>
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
+									<h2>Trim the fat</h2>
+									<p>Ever looked at a keyboard and thought "wow, I really only need like two buttons?? what're the rest of these suckers for? with our new innovation, you can do away with those pesky buttons to focus on what's really important: like <i>family, friends</i>, and the <b>hyphen key</b></p>
 									<ul class="actions">
 										<li><a href="generic.html" class="button">Learn more</a></li>
 									</ul>
@@ -70,11 +72,11 @@
 							</div>
 						</section>
 						<section>
-							<a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%" /></a>
+							<a href="#" class="image"><img src="images/lett.jpg" alt="" data-position="25% 25%" /></a>
 							<div class="content">
 								<div class="inner">
-									<h2>Ultricies aliquam</h2>
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
+									<h2>Uhhhh</h2>
+									<p>I ran out of useful features to list, but remember to eat your fruits and veggies! Keep your body healthy with a balanced diet!</p>
 									<ul class="actions">
 										<li><a href="generic.html" class="button">Learn more</a></li>
 									</ul>
@@ -88,6 +90,13 @@
 						<div class="inner">
 							<h2>What we do</h2>
 							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
+
+							<textarea id="codeInput"></textarea>
+							<input type="file"
+								   id="upload" name="file"
+								   accept=".txt,.py,.c,.cpp,.js,.">
+							<button onclick="convertInput()">Convert</button>
+
 							<div class="features">
 								<section>
 									<span class="icon solid major fa-code"></span>
@@ -119,6 +128,7 @@
 									<h3>Aliquam urna dapibus</h3>
 									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
 								</section>
+
 							</div>
 							<ul class="actions">
 								<li><a href="generic.html" class="button">Learn more</a></li>
@@ -204,6 +214,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="converter.js"></script>
 
 	</body>
 </html>
